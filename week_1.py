@@ -5,40 +5,40 @@ could import random
 random integer for index
 
 """
-import random
+import random                                                                              #(n)
 
-def random_sort():
+def random_sort():                                                                         #(n)
     
-    array = []
+    array = []                                                                             #(n)
     
     #generate random numbers for List
     
-    for num in range(0,10):
-        x = random.randint(0,100)
-        array.append(x)
+    for num in range(0,10):                                                                #(n)
+        x = random.randint(0,100)                                                          #(n)
+        array.append(x)                                                                    #(n)
         
-    print("This is the original array: ")
-    print(array)
+    print("This is the original array: ")                                                  #(n)
+    print(array)                                                                           #(n)
 
-    arrayLength = len(array)
+    arrayLength = len(array)                                                               #(n)
     
-    associationA = [0,1,2,3,4]
-    assosciationB = [5,6,7,8,9]
+    associationA = [0,1,2,3,4]                                                             #(n)
+    assosciationB = [5,6,7,8,9]                                                            #(n)
     
     
-    for num in range(0,arrayLength):
-        z = random.randint(0,arrayLength-1)
-        a = random.choice(associationA)
-        b = random.choice(assosciationB)
-        array[a],array[z] = array[z], array[a]
-        array[0],array[b] = array[b], array[0]
+    for num in range(0,arrayLength):                                                       #(n)
+        z = random.randint(0,arrayLength-1)                                                #(n)
+        a = random.choice(associationA)                                                    #(n)
+        b = random.choice(assosciationB)                                                   #(n)
+        array[a],array[z] = array[z], array[a]                                             #(n)
+        array[0],array[b] = array[b], array[0]                                             #(n)
         
     
-    print("This is the new array: ")
+    print("This is the new array: ")                                                       #(n)
     
-    print(array)
+    print(array)                                                                           #(n)
 
-random_sort()
+random_sort()                                                                              #(n)
 
 #Question 2 
 print("Question 2")

@@ -1,0 +1,20 @@
+// research: https://www.quora.com/Is-there-an-algorithm-to-find-the-nearest-square-of-a-given-number
+// A perfect square is a number that can be expressed as a product of two equal integers
+// Take the root of the number
+// round it down to an integer (floor_int) and then add 1 (ceil_int)
+// square both integers
+// calculate which square is the closest to the original number and return it.
+
+PERFECT-SQUARE(NUM):
+    lower_root_num <- root(NUM)
+    lower_root_num <- int(lower_root_num)
+    upper_root_num <- lower_root += 1
+    lower_square <- lower_root_num * lower_root_num
+    upper_square <- upper_root_num * upper_root_num
+    
+    if lower_root = NUM:
+        return lower_root
+    else:
+        return upper_root
+        
+        

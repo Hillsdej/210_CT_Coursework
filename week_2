@@ -1,3 +1,4 @@
+//Question 1
 // research: https://www.quora.com/Is-there-an-algorithm-to-find-the-nearest-square-of-a-given-number
 // A perfect square is a number that can be expressed as a product of two equal integers
 // Take the root of the number
@@ -16,5 +17,10 @@ PERFECT-SQUARE(NUM):
         return lower_root
     else:
         return upper_root
-        
+
+//Question 2
+
+Both algorithms in week_1 c/w are O(n)
+
+
         

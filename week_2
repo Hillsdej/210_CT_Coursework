@@ -39,17 +39,6 @@ MATRIXSUBTRACTION(MATRIXA,MATRIXB)
 
         return subtractiontotal
 
-
-
-
-
-
-
-
-
-
-
-
 MATRIXMULTIPLICATION(MATRIXA,MATRIXB)
     x <- 1
     while true:
@@ -64,5 +53,13 @@ MATRIXMULTIPLICATION(MATRIXA,MATRIXB)
        total += rval*cval
 
     return total
-        
+       
+       
+       
+For i <- 1 to n:
+    for j <- to n:
+    INPUT element at position [i,j]
+    
+M[i,j]
+M[i][j]
         

@@ -22,5 +22,47 @@ PERFECT-SQUARE(NUM):
 
 Both algorithms in week_1 c/w are O(n)
 
+//Question 3
 
+INPUT <- MATRIXA
+INPUT <- MATRIXB
+
+MATRIXADDITION(MATRIXA,MATRIXB)
+    for each value in row and value in column:
+        total = rowValue + columnValue
+
+        return sumtotal
+
+MATRIXSUBTRACTION(MATRIXA,MATRIXB)
+    for each value in row and value in column:
+        total = rowValue - columnValue
+
+        return subtractiontotal
+
+
+
+
+
+
+
+
+
+
+
+
+MATRIXMULTIPLICATION(MATRIXA,MATRIXB)
+    x <- 1
+    while true:
+        if x > length MATRIXA:
+            break
+        else:
+            num <- multiply(row,col)
+            return num
+            x += 1
+    
+    for each rowValue in row and colValue in col:    
+       total += rval*cval
+
+    return total
+        
         

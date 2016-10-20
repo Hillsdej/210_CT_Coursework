@@ -7,7 +7,7 @@
 // calculate which square is the closest to the original number and return it.
 
 PERFECT-SQUARE(NUM):
-    lower_root_num <- root(NUM)
+    lower_root_num <- squareroot(NUM)
     lower_root_num <- int(lower_root_num)
     upper_root_num <- lower_root + 1
     lower_square <- lower_root_num * lower_root_num

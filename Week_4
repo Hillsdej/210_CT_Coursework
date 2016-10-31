@@ -1,0 +1,30 @@
+#BinarySearch Steps
+1. Find middle val
+2. if the search value is equal to the middle value then it is successful
+3. if the search value is greater than the middle value then discard the lower half of the list
+4. if the search value is less than the middle value then discard the upper half of the list
+5. repeat until the length of the sequence is equal to 0
+
+seq -> [42,17,3,29,5,6,30,1]
+sortedSeq -> sort(seq)
+output: [1,3,5,6,17,29,30,42]
+
+//output whether a value within an interval was found 
+
+MOD_BINARY_SEARCH(s,u,l):
+    
+    // s is the sorted sequence
+    // u is the upper limit
+    // l is the lower limit
+    
+    low_index -> 1
+    high_index -> length(sortedSeq)
+    middle = length(sortedSeq) // 2
+    
+    while low_index >= high_index:
+        if s[middle] >= u and s[middle] <= l:
+            return true
+        else if s[middle] < l
+            low_index += 1
+        else:
+            high_index += 1

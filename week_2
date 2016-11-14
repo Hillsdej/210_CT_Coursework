@@ -13,7 +13,7 @@ PERFECT-SQUARE(NUM):
     lower_square <- lower_root_num * lower_root_num
     upper_square <- upper_root_num * upper_root_num
     
-    if lower_root = NUM:
+    if upper_square >= NUM:
         return lower_root
     else:
         return upper_root

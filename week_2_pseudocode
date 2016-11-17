@@ -27,33 +27,25 @@ Both algorithms in week_1 c/w are O(n)
 INPUT <- MATRIXA
 INPUT <- MATRIXB
 
-MATRIXADDITION(MATRIXA,MATRIXB)
-    for each value in row and value in column:
-        total = rowValue + columnValue
+// Matrix Multiplication
 
-        return sumtotal
+aLen = LENGTH(MATRIXA)
+bLen = LENGTH(MATRIXB)
+// c = empty matrix
 
-MATRIXSUBTRACTION(MATRIXA,MATRIXB)
-    for each value in row and value in column:
-        total = rowValue - columnValue
+MULTIPLICATION():
+    if LENGTH(MATRIXA) != LENGTH(MATRIXB):
+        return null
+    else:
+        
+        for i <- 0 To aLen:
+            for j <- 0 To bLen:
+                for k <- 0 To aLen:
+                    c[i][j] += a[i][k] * b[k][j]
+        
+        return c
 
-        return subtractiontotal
 
-MATRIXMULTIPLICATION(MATRIXA,MATRIXB)
-    x <- 1
-    while true:
-        if x > length MATRIXA:
-            break
-        else:
-            num <- multiply(row,col)
-            return num
-            x += 1
-    
-    for each rowValue in row and colValue in col:    
-       total += rval*cval
-
-    return total
-       
        
        
 For i <- 1 to n:

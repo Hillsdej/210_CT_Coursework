@@ -65,17 +65,18 @@ MULTIPLICATION(A,B):
         
         return C
 
-A <- [][]
-B <- INPUT(MATRIXB)
-C <- INPUT(MATRIXC)
+
 
 EQUATION():
     
+    A <- [][]
+    B <- INPUT(MATRIXB)
+    C <- INPUT(MATRIXC)
     // A = (B*C) - 2*(B+C)
     x = MULTIPLY(B,C)
     y = 2*(ADDITION(B,C)
-    RESULT = SUBTRACT(x,y)
-    return RESULT
+    A = SUBTRACT(x,y)
+    return A
 
 
 /*       

@@ -1,10 +1,12 @@
-//Question 1
-// research: https://www.quora.com/Is-there-an-algorithm-to-find-the-nearest-square-of-a-given-number
-// A perfect square is a number that can be expressed as a product of two equal integers
-// Take the root of the number
-// round it down to an integer (floor_int) and then add 1 (ceil_int)
-// square both integers
-// calculate which square is the closest to the original number and return it.
+/*
+Question 1
+research: https://www.quora.com/Is-there-an-algorithm-to-find-the-nearest-square-of-a-given-number
+A perfect square is a number that can be expressed as a product of two equal integers
+Take the root of the number
+round it down to an integer (floor_int) and then add 1 (ceil_int)
+square both integers
+calculate which square is the closest to the original number and return it.
+*/
 
 PERFECT-SQUARE(NUM):
     lower_root_num <- squareroot(NUM)
@@ -27,31 +29,60 @@ Both algorithms in week_1 c/w are O(n)
 INPUT <- MATRIXA
 INPUT <- MATRIXB
 
-// Matrix Multiplication
+A <- MATRIXA
+B <- MATRIXB
 
-aLen = LENGTH(MATRIXA)
-bLen = LENGTH(MATRIXB)
+// Matrix Multiplication
 // c = empty matrix
 
-MULTIPLICATION():
-    if LENGTH(MATRIXA) != LENGTH(MATRIXB):
+ADDITION(A,B):
+    
+    if LENGTH(A) != LENGTH(B):
+        return Null
+    else:
+        for i <- 0 To LENGTH(A):
+            RESULT[i][j] += (A[i] + B[j])
+            j += 1
+
+SUBTRACTION(A,B):
+    
+    if LENGTH(A) != LENGTH(B):
+        return Null
+    else:
+        for i <- 0 To LENGTH(A):
+            RESULT[i][j] += (A[i] - B[j])
+            j += 1
+
+MULTIPLICATION(A,B):
+    if LENGTH(A) != LENGTH(B):
         return null
     else:
         
-        for i <- 0 To aLen:
-            for j <- 0 To bLen:
-                for k <- 0 To aLen:
-                    c[i][j] += a[i][k] * b[k][j]
+        for i <- 0 To LENGTH(A):
+            for j <- 0 To LENGTH(B):
+                for k <- 0 To LENGTH(A):
+                    RESULT[i][j] += A[i][k] * B[k][j]
         
-        return c
+        return C
+
+A <- [][]
+B <- INPUT(MATRIXB)
+C <- INPUT(MATRIXC)
+
+EQUATION():
+    
+    // A = (B*C) - 2*(B+C)
+    x = MULTIPLY(B,C)
+    y = 2*(ADDITION(B,C)
+    RESULT = SUBTRACT(x,y)
+    return RESULT
 
 
-       
-       
+/*       
 For i <- 1 to n:
     for j <- to n:
     INPUT element at position [i,j]
     
 M[i,j]
 M[i][j]
-        
+*/      

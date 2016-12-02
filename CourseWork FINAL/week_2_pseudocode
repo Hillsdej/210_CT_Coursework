@@ -17,57 +17,62 @@ Both algorithms in week_1 c/w are O(n)
 
 //Question 3
 
-INPUT <- MATRIXA
-INPUT <- MATRIXB
+INPUT <- MATRIXA                                                //O(1)
+INPUT <- MATRIXB                                                //O(1)
 
-A <- MATRIXA
-B <- MATRIXB
+A <- MATRIXA                                                    //O(1)
+B <- MATRIXB                                                    //O(1)
 
 // Matrix Multiplication
 // c = empty matrix
 
 ADDITION(A,B)
     
-    if LENGTH(A) != LENGTH(B):
-        return Null
-    else:
-        for i <- 0 To LENGTH(A):
-            RESULT[i][j] += (A[i] + B[j])
-            j += 1
+    if LENGTH(A) != LENGTH(B):                                  //O(1)
+        return Null                                             //O(1)
+    else:                                                       //O(1)
+        for i <- 0 To LENGTH(A):                                //O(n)
+            RESULT[i][j] += (A[i] + B[j])                       //O(n)
+            j += 1                                              //O(n)
+
+//Worst case efficiency of O(n)
 
 SUBTRACTION(A,B)
     
-    if LENGTH(A) != LENGTH(B):
-        return Null
-    else:
-        for i <- 0 To LENGTH(A):
-            RESULT[i][j] += (A[i] - B[j])
-            j += 1
+    if LENGTH(A) != LENGTH(B):                                  //O(1)
+        return Null                                             //O(1)
+    else:                                                       //O(1)
+        for i <- 0 To LENGTH(A):                                //O(n)
+            RESULT[i][j] += (A[i] - B[j])                       //O(n)
+            j += 1                                              //O(n)
+
+//Worst case efficiency of O(n)
 
 MULTIPLICATION(A,B)
-    if LENGTH(A) != LENGTH(B):
-        return null
-    else:
+    if LENGTH(A) != LENGTH(B):                                  //O(1)
+        return null                                             //O(1)
+    else:                                                       //O(1)
+        for i <- 0 To LENGTH(A):                                //O(n)
+            for j <- 0 To LENGTH(B):                            //O(n*n)
+                for k <- 0 To LENGTH(A):                        //O(n*n(log(n))
+                    RESULT[i][j] += A[i][k] * B[k][j]           //O(n*n(log(n))
         
-        for i <- 0 To LENGTH(A):
-            for j <- 0 To LENGTH(B):
-                for k <- 0 To LENGTH(A):
-                    RESULT[i][j] += A[i][k] * B[k][j]
-        
-        return C
+        return C                                                //O(1)
 
-
+//Worst case efficiency of O(n*n(log(n)))
 
 EQUATION():
-    A <- [][]
-    B <- INPUT(MATRIXB)
-    C <- INPUT(MATRIXC)
+    A <- [][]                                                   //O(1)
+    B <- INPUT(MATRIXB)                                         //O(1)
+    C <- INPUT(MATRIXC)                                         //O(1)
     // A = (B*C) - 2*(B+C)
     
-    x <- MULTIPLY(B,C)
-    y <- 2*(ADDITION(B,C)
-    A = SUBTRACT(x,y)
-    return A
+    x <- MULTIPLY(B,C)                                          //O(n*n(log(n)))
+    y <- 2*(ADDITION(B,C)                                       //O(n)
+    A = SUBTRACT(x,y)                                           //O(n)
+    return A                                                    //O(1)
+    
+//Worst case efficiency of O(n*n(log(n)))
 
 
 /*       

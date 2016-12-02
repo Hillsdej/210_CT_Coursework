@@ -1,0 +1,17 @@
+rArray <- []                                                //O(1)
+sentence <- "this is just a test"                           //O(1)
+sArray <- SPLIT(sArray)                                     //O(1)
+
+REVERSE(X):
+    
+    //takes last word and appends to reverse list
+    
+    if x >= 1:                                              //O(n)
+        rArray <- APPEND(sArray[x])                         //O(n)
+        REVERSE(X-1)                                        //O(n)
+    else:                                                   //O(n)
+        RETURN reverse                                      //O(n)
+    
+REVERSE(LENGTH(sArray)-1)                                   //O(n)
+
+//Worst Case efficiency of O(n)

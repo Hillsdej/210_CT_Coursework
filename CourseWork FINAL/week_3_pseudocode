@@ -1,3 +1,5 @@
+//Question 6
+
 rArray <- []                                                //O(1)
 sentence <- "this is just a test"                           //O(1)
 sArray <- SPLIT(sArray)                                     //O(1)
@@ -15,3 +17,39 @@ REVERSE(X):
 REVERSE(LENGTH(sArray)-1)                                   //O(n)
 
 //Worst Case efficiency of O(n)
+
+
+//Question 7
+
+PRIMECHECK(X,Y):
+    
+    if y <= 1:
+        RETURN("x is a prime")    
+    else:
+        if x % y == 0:
+            RETURN("x is not prime")
+        else:
+            PRIMECHECK(X,Y-1)
+
+
+//Question 8
+
+word <- "evacuation"
+wordList <- LIST(word)
+
+v <- "aeiou"
+x <- 0
+
+VOWELREMOVAL(WORDSTEP,WORDLENGTH):
+    
+    if WORDSTEP >= WORDLENGTH:
+        RETURN wordList
+    elif wordList[WORDSTEP] IN v:
+        wordList <- REMOVE(wordList[WORDSTEP])
+        RETURN VOWELREMOVAL(WORDSTEP,WORDLENGTH-1)
+    else:
+        RETURN VOWELREMOVAL(WORDSTEP+1,WORDLENGTH)
+        
+
+RETURN(VOWELREMOVAL(0,LENGTH(word)))
+        

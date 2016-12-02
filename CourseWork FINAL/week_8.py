@@ -4,6 +4,7 @@ class Node:
     
     def __init__(self, label):
         self.label = label
+        #set all other nodes distance as infinity
         self.distance = -1
         
 class Graph:
@@ -63,8 +64,11 @@ class Graph:
 
         unvisited = []
         visited = []
+        #initial node has tentative distance of 0
         self.nodes[start].distance = 0
+        #sets initial node as current
         current = start
+        #all other related nodes are moved to an unvisited set
         for i in self.edge_index:
             unvisited.append(i)
 
@@ -72,19 +76,25 @@ class Graph:
             neighbours_weight, neighbours_name = self.get_neighbours(current)
 
             for i in range(len(neighbours_weight)):
+                #compare tentative distances
                 distance = self.nodes[current].distance + int(neighbours_weight[i])
                 if self.nodes[neighbours_name[i]].distance == -1:
                     self.nodes[neighbours_name[i]].distance = distance
                 elif self.nodes[neighbours_name[i]].distance > distance:
                     self.nodes[neighbours_name[i]].distance = distance
-
+            
+            #mark current node as visited
             visited.append(current)
-
+            
+            #remove from unvisited set (will not be checked again)
             if current in unvisited:
                 unvisited.remove(current)
 
             check = self.check_infinity(unvisited)
-
+            
+            #if destination node has been visited or smallest tentative distance
+            #among nodes in the unvisited set is infinity, then stop
+            #reference(https://en.wikipedia.org/wiki/Dijkstra's_algorithm)
             if goal in visited or check:
                 print(visited)
                 return

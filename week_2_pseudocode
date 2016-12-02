@@ -15,10 +15,11 @@ PERFECT-SQUARE(NUM):
     lower_square <- lower_root_num * lower_root_num
     upper_square <- upper_root_num * upper_root_num
     
+    
     if upper_square >= NUM:
-        return lower_root
+        return lower_root **2
     else:
-        return upper_root
+        return upper_root **2
 
 //Question 2
 
@@ -35,7 +36,7 @@ B <- MATRIXB
 // Matrix Multiplication
 // c = empty matrix
 
-ADDITION(A,B):
+ADDITION(A,B)
     
     if LENGTH(A) != LENGTH(B):
         return Null
@@ -44,7 +45,7 @@ ADDITION(A,B):
             RESULT[i][j] += (A[i] + B[j])
             j += 1
 
-SUBTRACTION(A,B):
+SUBTRACTION(A,B)
     
     if LENGTH(A) != LENGTH(B):
         return Null
@@ -53,7 +54,7 @@ SUBTRACTION(A,B):
             RESULT[i][j] += (A[i] - B[j])
             j += 1
 
-MULTIPLICATION(A,B):
+MULTIPLICATION(A,B)
     if LENGTH(A) != LENGTH(B):
         return null
     else:
@@ -68,13 +69,13 @@ MULTIPLICATION(A,B):
 
 
 EQUATION():
-    
     A <- [][]
     B <- INPUT(MATRIXB)
     C <- INPUT(MATRIXC)
     // A = (B*C) - 2*(B+C)
-    x = MULTIPLY(B,C)
-    y = 2*(ADDITION(B,C)
+    
+    x <- MULTIPLY(B,C)
+    y <- 2*(ADDITION(B,C)
     A = SUBTRACT(x,y)
     return A
 

@@ -1,0 +1,34 @@
+CLASS NODE
+
+    CONSTRUCTOR(SELF, N)
+        SELF.name <- n
+        SELF.related <- []
+
+    ADD_RELATION(SELF, N)
+        if N NOT IN SELF.related:
+            //appends the node to the related list and sorts it
+            SELF.related <- APPEND(N)
+            SORT(SELF.related)
+            
+CLASS GRAPH
+
+    nodes <- {}
+    //so we can find any node by its name
+
+    ADD_NODE(SELF, NODE):
+        
+        //check it doesnt already exist in the dictionary
+        if NODE.name NOT IN SELF.nodes:
+            SELF.nodes[NODE.name] <- node
+    
+
+    ADD_EDGE(SELF,U,V)
+        if U IN SELF.nodes AND V IN SELF.nodes:
+            //adds v to u's list of edges and vice versa
+            SELF.nodes[U].ADD_RELATION(V)
+            SELF.nodes[V].ADD_RELATION(U)
+
+
+    PRINT_GRAPH(SELF):
+        for key in SORT(LIST(SELF.nodes.keys())):
+            RETURN(key + STRING(SELF.nodes[key].related))

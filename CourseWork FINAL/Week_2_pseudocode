@@ -1,0 +1,80 @@
+PERFECT-SQUARE(NUM):
+    lower_root_num <- squareroot(NUM)
+    lower_root_num <- int(lower_root_num)
+    upper_root_num <- lower_root + 1
+    lower_square <- lower_root_num * lower_root_num
+    upper_square <- upper_root_num * upper_root_num
+    
+    
+    if upper_square >= NUM:
+        return lower_root **2
+    else:
+        return upper_root **2
+
+//Question 2
+
+Both algorithms in week_1 c/w are O(n)
+
+//Question 3
+
+INPUT <- MATRIXA
+INPUT <- MATRIXB
+
+A <- MATRIXA
+B <- MATRIXB
+
+// Matrix Multiplication
+// c = empty matrix
+
+ADDITION(A,B)
+    
+    if LENGTH(A) != LENGTH(B):
+        return Null
+    else:
+        for i <- 0 To LENGTH(A):
+            RESULT[i][j] += (A[i] + B[j])
+            j += 1
+
+SUBTRACTION(A,B)
+    
+    if LENGTH(A) != LENGTH(B):
+        return Null
+    else:
+        for i <- 0 To LENGTH(A):
+            RESULT[i][j] += (A[i] - B[j])
+            j += 1
+
+MULTIPLICATION(A,B)
+    if LENGTH(A) != LENGTH(B):
+        return null
+    else:
+        
+        for i <- 0 To LENGTH(A):
+            for j <- 0 To LENGTH(B):
+                for k <- 0 To LENGTH(A):
+                    RESULT[i][j] += A[i][k] * B[k][j]
+        
+        return C
+
+
+
+EQUATION():
+    A <- [][]
+    B <- INPUT(MATRIXB)
+    C <- INPUT(MATRIXC)
+    // A = (B*C) - 2*(B+C)
+    
+    x <- MULTIPLY(B,C)
+    y <- 2*(ADDITION(B,C)
+    A = SUBTRACT(x,y)
+    return A
+
+
+/*       
+For i <- 1 to n:
+    for j <- to n:
+    INPUT element at position [i,j]
+    
+M[i,j]
+M[i][j]
+*/      
